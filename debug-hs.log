@@ -1,0 +1,8 @@
+      /home/alois/.stack/setup-exe-cache/x86_64-linux-nix/setup-Simple-Cabal-1.22.5.0-ghc-7.10.3 --builddir=.stack-work/dist/x86_64-linux-nix/Cabal-1.22.5.0 build lib:sarsi exe:sarsi exe:sarsi-hs exe:sarsi-nvim --ghc-options " -ddump-hi -ddump-to-file"
+    Process exited with code: ExitFailure 1
+    Logs have been written to: /home/alois/ego/sarsi/.stack-work/logs/sarsi-0.1.log
+
+    Preprocessing library sarsi-0.1...
+    [10 of 10] Compiling Codec.Sarsi.SBT  ( src/Codec/Sarsi/SBT.hs, .stack-work/dist/x86_64-linux-nix/Cabal-1.22.5.0/build/Codec/Sarsi/SBT.o )
+    
+    /home/alois/ego/sarsi/src/Codec/Sarsi/SBT.hs:8:15: parse error on input `do'

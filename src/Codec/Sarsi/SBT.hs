@@ -11,6 +11,21 @@ import qualified Data.Vector as Vector
 data SBTEvent = CompileStart Text | TaskFinish Bool Text | Throw Message
   deriving Show
 
+byLine :: Parser Text
+byLine = untilLineBreak <* end
+
+cleanEC :: Parser Text
+cleanEC = choice [noEC, withEC]
+  where
+    noEC    = takeWhileNotStart <* choice [endOfInput, return ()]
+    withEC  = takeWhileNotStart <* (takeWhileNotEnd *> (anyChar <* choice [endOfInput, return ()]))
+    takeWhileNotStart = takeWhile1 (not . isEscapeStart . fromEnum)
+    takeWhileNotEnd = takeWhile1 (not . isEscapeEnd . fromEnum)
+    isEscapeStart 27 = True
+    isEscapeStart _  = False
+    isEscapeEnd i  | i >= 64 || i <= 95 = True
+    isEscapeEnd _ = False
+
 eventParser :: Parser SBTEvent
 eventParser = choice [compile, finish, Throw <$> messageParser]
   where

@@ -1,0 +1,8 @@
+[error] /home/alois/bestmile/platform/common/src/main/scala/Enum.scala:13: type mismatch;
+[error]  found   : String("a")
+[error]  required: Int
+[error]   def aoeuaoe: Int = "a"
+[error]                      ^
+[error] one error found
+[error] (common/compile:compile) Compilation failed
+[error] Total time: 1 s, completed Apr 10, 2016 8:58:50 AM

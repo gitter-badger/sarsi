@@ -1,0 +1,24 @@
+[info] Compiling 1 Scala source to /home/alois/bestmile/platform/common/target/scala-2.11/classes...
+[error] /home/alois/bestmile/platform/common/src/main/scala/Enum.scala:13: not found: value ffoo
+[error]   ffoo
+[error]   ^
+[error] one error found
+[error] (common/compile:compile) Compilation failed
+[error] Total time: 1 s, completed Apr 10, 2016 8:46:06 AM
+4. Waiting for source changes... (press enter to interrupt)
+[info] Compiling 1 Scala source to /home/alois/bestmile/platform/common/target/scala-2.11/classes...
+[warn] /home/alois/bestmile/platform/common/src/main/scala/Enum.scala:13: side-effecting nullary methods are discouraged: suggest defining as `def aoeuaoe()` instead
+[warn]   def aoeuaoe = {}
+[warn]       ^
+[warn] one warning found
+[info] Compiling 10 Scala sources to /home/alois/bestmile/platform/model/target/scala-2.11/classes...
+[success] Total time: 5 s, completed Apr 10, 2016 8:53:56 AM
+[info] Compiling 1 Scala source to /home/alois/bestmile/platform/common/target/scala-2.11/classes...
+[error] /home/alois/bestmile/platform/common/src/main/scala/Enum.scala:13: type mismatch;
+[error]  found   : String("a")
+[error]  required: Int
+[error]   def aoeuaoe: Int = "a"
+[error]                      ^
+[error] one error found
+[error] (common/compile:compile) Compilation failed
+[error] Total time: 1 s, completed Apr 10, 2016 8:58:50 AM

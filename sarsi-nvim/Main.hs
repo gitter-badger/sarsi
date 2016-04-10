@@ -34,6 +34,7 @@ mkQuickFix (Message (Location fp col ln) lvl txts) = toObject . Map.fromList $
       tpe Error   = "E"
       tpe Warning = "W"
 
+-- TODO Only replace quickfix on first message (so the quickfix list is still full until first error arrise)
 main :: IO ()
 main = do
   hSetBuffering stdin NoBuffering
